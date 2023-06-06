@@ -18,6 +18,7 @@ const handleStreams = async (onlineStreams = []) => {
 
 
 const sendStreams = async () => {
+    console.log('start sendStream');
     const { access_token } = await tokens.get('simkav')
     let onlineStreams = []
     try {
@@ -35,6 +36,7 @@ const sendStreams = async () => {
 
 
 const startLoop = () => {
+    console.log('loop started');
     const id = setInterval(sendStreams, 1_000 * 100 * 1)
     return () => clearInterval(id)
 }
