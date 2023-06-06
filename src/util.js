@@ -32,6 +32,7 @@ const sendStreams = async () => {
     const updatedStremas = await handleStreams(onlineStreams)
     if (updatedStremas.length) await sendStreamsToTg(updatedStremas)
     console.log(updatedStremas)
+    return updatedStremas.join(',')
 }
 
 
@@ -41,4 +42,4 @@ const startLoop = () => {
     return () => clearInterval(id)
 }
 
-module.exports = { startLoop }
+module.exports = { startLoop, sendStreams }
