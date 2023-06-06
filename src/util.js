@@ -1,6 +1,6 @@
 const { streams, tokens } = require("./db")
 const { sendStreamsToTg } = require("./telegram")
-const { getOnlineStream } = require("./twitch")
+const { getOnlineStream, refreshToken } = require("./twitch")
 
 const updateTokens = async () => {
     const { refresh_token } = await tokens.get('simkav')
