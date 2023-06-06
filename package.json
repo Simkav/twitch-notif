@@ -8,5 +8,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@cyclic.sh/dynamodb": "^0.0.33",
+    "pg-promise": "^11.5.0",
+    "undici": "^5.22.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.1.4"
+  }
 }
