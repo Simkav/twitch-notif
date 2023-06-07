@@ -27,6 +27,7 @@ const sendStreams = async () => {
         if (e.message = 401) {
             await updateTokens()
             sendStreams()
+            return ''
         }
     }
     const updatedStremas = await handleStreams(onlineStreams)
